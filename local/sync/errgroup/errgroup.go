@@ -8,6 +8,7 @@ package errgroup
 
 import (
 	"context"
+	"log"
 	"sync"
 )
 
@@ -50,6 +51,7 @@ func (g *Group) Wait() error {
 // returned by Wait.
 func (g *Group) Go(f func() error) {
 	g.wg.Add(1)
+	log.Println("Let's go!")
 
 	go func() {
 		defer g.wg.Done()
