@@ -1,1 +1,0 @@
-This is an other file created in feature1 branch
